@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title >New patient</title>
+    <style>
+      legend { 
+      color: #fff;
+      background-color: #095484;
+      padding: 3px 5px;
+      font-size: 20px;
+      }
+        table {
+          width:60%;
+          }
+        table, th, td {
+          border: 0.1px solid rgb(126, 199, 241);
+          border-collapse: collapse;
+          }
+        th, td {
+        padding: 50px;
+        text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <form action="/action_page.php" target="_blank" method="POST"><!-- to post the data in seprate page -->
+    <h2 style="font-size:250%;" align="center">New Patient Prescription</h2>
+      <fieldset style="background-color:hsla(9, 100%, 85%, 0.5);">
+        <legend style="font-size:200%;">Prescription detail</legend>
+        <br>
+
+        <label for="name" style="font-size:150%;" > NAME: </label>
+        <input  style="font-size:120%;" id="name" type="text" name="name" placeholder="Full name" required>
+        <br><br>
+        <label for="age" style="font-size:150%;">AGE:</label> 
+        <input style="font-size:100%;" id="age" type="number" min="01" max="110" step="1" name="number-of-colors">  
+        <br><br>
+        <label for="gender" style="font-size:150%;">GENDER</label> 
+        <input style="font-size:150%;" type="radio" name="gender" value="male" > Male &emsp;
+        <input style="font-size:150%;" type="radio" name="gender" value="female"> Female &emsp;
+        <input style="font-size:150%;" type="radio" name="gender" value="other"> Other                                                                                                   
+        <br><br>
+
+        <table>
+            <tr>
+                <th style="font-size:150%;">KEYWORD</th>
+                <th style="font-size:150%;">DATA</th> 
+              </tr>
+            <tr>
+              <td style="font-size:120%;">NAME,AGE,GENDER</td>
+              <td><textarea name="message" rows="10" cols="60" style="font-size:100%;"></textarea></td>
+            </tr>
+            <tr>
+              <td style="font-size:120%;">SYMPTOMS</td>
+              <td><textarea name="message" rows="10" cols="60" style="font-size:100%;"></textarea>  </td>
+            </tr>
+            <tr>
+              <td style="font-size:120%;">DIAGONOSIS</td>
+              <td><textarea name="message" rows="10" cols="60" style="font-size:100%;"></textarea>  </td>
+            </tr>
+            <tr>
+              <td style="font-size:120%;">PRESCREPTION</td>
+              <td><textarea name="message" rows="10" cols="60" style="font-size:100%;"></textarea>  </td>
+            </tr>
+            <tr>
+              <td style="font-size:120%;">DOSE</tdstyle="font-size:120%;">
+            <td><textarea name="message" rows="10" cols="60" style="font-size:100%;"></textarea>  </td>
+            </tr>
+          </table>
+ </fieldsetstyle="background-color:rgb(230, 217, 176);>
+ <br>
+ <fieldset>
+    <legend style="font-size:180%;">SUBMITION</legend>
+    <label for="address" style="font-size:150%;">EMAIL ADDRESS:</label> 
+    <input style="font-size:120%;" id="address" type="email" name="email" placeholder="YourEmail@example.com" required>
+    <br>
+    <label for="tel" style="font-size:150%;">MOBILE NO.:</label>
+    <input style="font-size:120%;" id="tel" type="tel" placeholder="1234567890"
+      pattern="[0-9]{10}"><br><br> 
+    <p align="center">
+        <input style="font-size:800%;" type="submit" value="VIEW"><br>
+        <button type="button" onclick="alert('Ones you submit, data will not be modified again..please view before sending the details')">SEND</button>
+    </p>
+</fieldset>
+</form>
+</body>
+<footer>
+
+</footer>
+</html>
